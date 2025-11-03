@@ -50,6 +50,7 @@
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       border: 2px dashed #667eea;
+      margin-bottom: 30px;
     }
     .converter-section h2 {
       color: #667eea;
@@ -134,12 +135,121 @@
       color: #28a745;
       font-weight: bold;
     }
+    .footer {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 10px;
+      border-left: 4px solid #28a745;
+      margin-top: 30px;
+    }
+    .footer h3 {
+      margin-top: 0;
+      color: #333;
+      font-size: 1.3em;
+    }
+    .contribution-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .contribution-item {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid #e9ecef;
+      transition: transform 0.2s ease;
+    }
+    .contribution-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .contribution-item strong {
+      color: #667eea;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .tech-stack {
+      background: #e7f3ff;
+      border: 1px solid #b3d8ff;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .tech-stack h4 {
+      margin-top: 0;
+      color: #0066cc;
+    }
+    .tech-badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .badge {
+      background: #667eea;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+    .contact-info {
+      background: #e8f5e8;
+      border: 1px solid #c3e6c3;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .contact-info h4 {
+      margin-top: 0;
+      color: #2d5a2d;
+    }
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      padding: 10px 15px;
+      border-radius: 25px;
+      text-decoration: none;
+      color: #333;
+      border: 2px solid #28a745;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+    .contact-link:hover {
+      background: #28a745;
+      color: white;
+      transform: translateY(-2px);
+    }
+    .contact-link .icon {
+      font-size: 1.2em;
+    }
     @media (max-width: 768px) {
       .container {
         grid-template-columns: 1fr;
       }
       .header h1 {
         font-size: 2em;
+      }
+      .contribution-list {
+        grid-template-columns: 1fr;
+      }
+      .contact-links {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -165,6 +275,17 @@
         <li>Suporte a arquivos até 200MB</li>
         <li>Download automático do resultado</li>
       </ul>
+
+      <div class="tech-stack">
+        <h4>🔧 Tecnologias Utilizadas</h4>
+        <div class="tech-badges">
+          <span class="badge">Python</span>
+          <span class="badge">FastAPI</span>
+          <span class="badge">HTML/CSS</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">Bundletool</span>
+        </div>
+      </div>
     </div>
 
     <!-- Documentação -->
@@ -210,6 +331,59 @@
     <div id="status" class="log" style="display: none;"></div>
   </div>
 
+  <!-- Seção de Contribuições -->
+  <div class="footer">
+    <h3>🤝 Contribuições & Feedback</h3>
+    <p>Este projeto é open source e suas contribuições são muito bem-vindas! Ajude-nos a melhorar esta ferramenta:</p>
+    
+    <div class="contribution-list">
+      <div class="contribution-item">
+        <strong>🐛 Reportar Bugs</strong>
+        <p>Encontrou algum erro? Nos ajude a identificar e corrigir problemas.</p>
+      </div>
+      
+      <div class="contribution-item">
+        <strong>💡 Sugerir Melhorias</strong>
+        <p>Tem ideias para novas funcionalidades ou melhorias na interface?</p>
+      </div>
+      
+      <div class="contribution-item">
+        <strong>📝 Pull Requests</strong>
+        <p>Desenvolvedores são bem-vindos! Envie suas contribuições de código.</p>
+      </div>
+      
+      <div class="contribution-item">
+        <strong>📖 Documentação</strong>
+        <p>Ajude a melhorar a documentação e tutoriais do projeto.</p>
+      </div>
+    </div>
+
+    <!-- Informações de Contato -->
+    <div class="contact-info">
+      <h4>📞 Entre em Contato</h4>
+      <p>Tem dúvidas, sugestões ou quer contribuir? Entre em contato comigo:</p>
+      
+      <div class="contact-links">
+        <a href="mailto:salleshenrique13@gmail.com" class="contact-link">
+          <span class="icon">📧</span>
+          <span>salleshenrique13@gmail.com</span>
+        </a>
+        
+        <a href="https://github.com/CharlesSales/GeradorDeApk.git" target="_blank" class="contact-link">
+          <span class="icon">🐙</span>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="tech-stack" style="margin-top: 20px;">
+      <h4>💖 Desenvolvido com carinho usando FastAPI e Bundletool</h4>
+      <p style="margin: 10px 0 0 0; opacity: 0.8;">
+        Projeto livre para uso pessoal e educacional | Versão 1.0
+      </p>
+    </div>
+  </div>
+
 <script>
 const form = document.getElementById('form');
 const status = document.getElementById('status');
@@ -244,7 +418,7 @@ form.addEventListener('submit', async (e) => {
   fd.append('aab', file);
 
   try {
-    const resp = await fetch('http://localhost:3002/generate-apk', { 
+    const resp = await fetch('https://geradordeapk-production.up.railway.app/', { 
       method: 'POST', 
       body: fd 
     });
